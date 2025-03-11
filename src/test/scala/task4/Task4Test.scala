@@ -34,3 +34,8 @@ class Task4Test:
 
   @Test def showMultiplyExpression(): Unit =
     assertEquals(leftPar + value1 + times + value2 + rightPar, show(Multiply(Literal(value1), Literal(value2))))
+
+  @Test def showComplexExpression(): Unit =
+    val value3: Int = 3
+    assertEquals(leftPar + leftPar + value1 + times + value2 + rightPar + plus + value3 + rightPar,
+      show(Add(Multiply(Literal(value1), Literal(value2)), Literal(value3))))
