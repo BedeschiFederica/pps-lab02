@@ -10,6 +10,11 @@ object Task4 extends App:
     case Multiply(expr1: Expr, expr2: Expr)
 
   object Expr:
+    /**
+     * Evaluates the expression.
+     * @param expr the expression to be evaluated
+     * @return the result of the expression
+     */
     def evaluate(expr: Expr): Int = expr match
       case Literal(n) => n
       case Add(expr1, expr2) => evaluate(expr1) + evaluate(expr2)
