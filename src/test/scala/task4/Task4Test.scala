@@ -24,3 +24,6 @@ class Task4Test:
 
   @Test def showLiteral(): Unit =
     assertEquals(value1.toString, show(Literal(value1)))
+    
+  @Test def showAddEpression(): Unit =
+    assertEquals("(" + value1 + " + " + value2 + ")", show(Add(Literal(value1), Literal(value2))))
