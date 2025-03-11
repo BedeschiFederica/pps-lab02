@@ -57,7 +57,7 @@ object Task2 extends App:
   def p3(x: Int)(y: Int)(z: Int): Boolean = x <= y && y == z
   def p4(x: Int, y: Int, z: Int): Boolean = x <= y && y == z
 
-  println("4:");
+  println("4:")
   println(p1(1)(2)(2)) // true
   println(p2(1, 2, 2)) // true
   println(p3(3)(2)(2)) // false
