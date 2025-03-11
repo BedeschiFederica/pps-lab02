@@ -6,8 +6,11 @@ import task1_4.Task4.Expr.*
 
 class Task4Test:
 
+  val value1: Int = 5
+  val value2: Int = 10
+
   @Test def evaluateLiteral(): Unit =
-    assertEquals(5, evaluate(Literal(5)))
+    assertEquals(value1, evaluate(Literal(value1)))
 
   @Test def evaluateAddExpression(): Unit =
-    assertEquals(15, evaluate(Add(Literal(5), Literal(10))))
+    assertEquals(value1 + value2, evaluate(Add(Literal(value1), Literal(value2))))
