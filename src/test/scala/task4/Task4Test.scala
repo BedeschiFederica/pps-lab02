@@ -8,6 +8,9 @@ class Task4Test:
 
   val value1: Int = 5
   val value2: Int = 10
+  val leftPar = "("
+  val rightPar = ")"
+  val plus = " + "
 
   @Test def evaluateLiteral(): Unit =
     assertEquals(value1, evaluate(Literal(value1)))
@@ -24,6 +27,6 @@ class Task4Test:
 
   @Test def showLiteral(): Unit =
     assertEquals(value1.toString, show(Literal(value1)))
-    
-  @Test def showAddEpression(): Unit =
-    assertEquals("(" + value1 + " + " + value2 + ")", show(Add(Literal(value1), Literal(value2))))
+
+  @Test def showAddExpression(): Unit =
+    assertEquals(leftPar + value1 + plus + value2 + rightPar, show(Add(Literal(value1), Literal(value2))))
