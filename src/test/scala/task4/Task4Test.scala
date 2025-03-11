@@ -17,3 +17,6 @@ class Task4Test:
 
   @Test def evaluateMultiplyExpression(): Unit =
     assertEquals(value1 * value2, evaluate(Multiply(Literal(value1), Literal(value2))))
+
+  @Test def evaluateComplexExpression(): Unit =
+    assertEquals(value1 * value2 + 3, evaluate(Add(Multiply(Literal(value1), Literal(value2)), Literal(3))))
