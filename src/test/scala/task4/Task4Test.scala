@@ -14,3 +14,6 @@ class Task4Test:
 
   @Test def evaluateAddExpression(): Unit =
     assertEquals(value1 + value2, evaluate(Add(Literal(value1), Literal(value2))))
+
+  @Test def evaluateMultiplyExpression(): Unit =
+    assertEquals(50, evaluate(Multiply(Literal(5), Literal(10))))
