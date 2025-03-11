@@ -8,6 +8,7 @@ class Task4Test:
 
   val value1: Int = 5
   val value2: Int = 10
+  val value3: Int = 3
   val leftPar = "("
   val rightPar = ")"
   val plus = " + "
@@ -23,7 +24,6 @@ class Task4Test:
     assertEquals(value1 * value2, evaluate(Multiply(Literal(value1), Literal(value2))))
 
   @Test def evaluateComplexExpression(): Unit =
-    val value3: Int = 3
     assertEquals(value1 * value2 + value3, evaluate(Add(Multiply(Literal(value1), Literal(value2)), Literal(value3))))
 
   @Test def showLiteral(): Unit =
@@ -36,6 +36,5 @@ class Task4Test:
     assertEquals(leftPar + value1 + times + value2 + rightPar, show(Multiply(Literal(value1), Literal(value2))))
 
   @Test def showComplexExpression(): Unit =
-    val value3: Int = 3
     assertEquals(leftPar + leftPar + value1 + times + value2 + rightPar + plus + value3 + rightPar,
       show(Add(Multiply(Literal(value1), Literal(value2)), Literal(value3))))
