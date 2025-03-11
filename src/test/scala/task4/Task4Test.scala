@@ -21,3 +21,6 @@ class Task4Test:
   @Test def evaluateComplexExpression(): Unit =
     val value3: Int = 3
     assertEquals(value1 * value2 + value3, evaluate(Add(Multiply(Literal(value1), Literal(value2)), Literal(value3))))
+
+  @Test def showLiteral(): Unit =
+    assertEquals(value1.toString, show(Literal(value1)))
