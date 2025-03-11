@@ -12,3 +12,4 @@ object Task4 extends App:
   object Expr:
     def evaluate(expr: Expr): Int = expr match
       case Literal(n) => n
+      case Add(expr1, expr2) => evaluate(expr1) + evaluate(expr2)
