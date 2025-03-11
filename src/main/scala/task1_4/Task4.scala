@@ -29,5 +29,5 @@ object Task4 extends App:
      */
     def show(expr: Expr): String = expr match
       case Literal(n) => n.toString
-      case Add(expr1, expr2) => "(" + show(expr1) + " + " + show(expr2) + ")"
-      case Multiply(expr1, expr2) => "(" + show(expr1) + " * " + show(expr2) + ")"
+      case Add(expr1, expr2) => s"(${show(expr1)} + ${show(expr2)})"
+      case Multiply(expr1, expr2) => s"(${show(expr1)} * ${show(expr2)})"
