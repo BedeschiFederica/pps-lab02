@@ -11,6 +11,7 @@ class Task4Test:
   val leftPar = "("
   val rightPar = ")"
   val plus = " + "
+  val times = " * "
 
   @Test def evaluateLiteral(): Unit =
     assertEquals(value1, evaluate(Literal(value1)))
@@ -30,3 +31,6 @@ class Task4Test:
 
   @Test def showAddExpression(): Unit =
     assertEquals(leftPar + value1 + plus + value2 + rightPar, show(Add(Literal(value1), Literal(value2))))
+
+  @Test def showMultiplyExpression(): Unit =
+    assertEquals(leftPar + value1 + times + value2 + rightPar, show(Multiply(Literal(value1), Literal(value2))))
