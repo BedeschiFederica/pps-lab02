@@ -15,12 +15,12 @@ class OptionalTest:
     assertFalse(Optional.isEmpty(nonEmpty))
   }
 
-  @Test def orElseShouldReturnDefaultWhenEmpty(): Unit = {
+  @Test def orElseShouldReturnDefaultWhenNonEmpty(): Unit = {
     val nonEmpty = Optional.Maybe(0)
     assertEquals(0, Optional.orElse(nonEmpty, 1))
   }
 
-  @Test def orElseShouldReturnValueWhenNonEmpty(): Unit = {
+  @Test def orElseShouldReturnValueWhenEmpty(): Unit = {
     val empty = Optional.Empty()
     assertEquals(1, Optional.orElse(empty, 1))
   }
@@ -33,7 +33,7 @@ class OptionalTest:
   }
 
   @Test def mapShouldReturnTransformedValueWhenNonEmpty(): Unit = {
-    val nonEmpty = Optional.Maybe(0)
+    val nonEmpty = Optional.Maybe(5)
     val result = Optional.map(nonEmpty, _ + 1)
-    assertEquals(1, Optional.orElse(result, 1))
+    assertEquals(6, Optional.orElse(result, 0))
   }
