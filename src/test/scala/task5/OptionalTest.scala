@@ -45,3 +45,7 @@ class OptionalTest:
   @Test def filterShouldReturnTheValueWhenSatisfied(): Unit =
     val nonEmpty = Optional.Maybe(5)
     assertEquals(nonEmpty, Optional.filter(nonEmpty)(_ > 2))
+
+  @Test def filterShouldReturnEmptyIfNotSatisfied(): Unit =
+    val nonEmpty = Optional.Maybe(5)
+    assertEquals(Optional.Empty(), Optional.filter(nonEmpty)(_ > 8))
