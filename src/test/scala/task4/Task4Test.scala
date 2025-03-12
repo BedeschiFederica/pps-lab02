@@ -2,7 +2,7 @@ package task4
 
 import org.junit.*
 import org.junit.Assert.*
-import task1_4.Task4.Expr.*
+import task1_4.Lab2.Expr.*
 
 class Task4Test:
 
